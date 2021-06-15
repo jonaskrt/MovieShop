@@ -1,0 +1,767 @@
+{
+	"id": "9df5737e-bb58-4d96-9437-82070e88a394",
+	"name": "Bookshelf",
+	"timestamp": "2021-06-15T20:32:56.382Z",
+	"collection_id": "0beb6848-fe59-4bbd-ba7d-f36b47cabc37",
+	"folder_id": 0,
+	"environment_id": "9f1ab2e8-b0a1-44ff-812e-357e1726ab63",
+	"totalPass": 29,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "bbdad673-695f-4ef6-a847-50be97f6f1b1",
+			"name": "LU02.1 Testservice",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/test/test",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "0356a9fc-1f92-4e90-8ea0-303b800aa49f",
+			"name": "LU03.1 All Books",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/list",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "5702ca88-fef2-4c2f-bc3b-12d76fc34902",
+			"name": "LU03.2 Read Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/read?uuid=3247c340-c712-402e-b400-0a23a9368c97",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "e7bbb270-6366-4164-a3f3-f4b8aa1f38fb",
+			"name": "LU03.3 Read unknown Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/read?uuid=3247c340-ffff-402e-b400-0a23a9368c97",
+			"time": 27,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "c3261454-4c85-477c-af85-e038c46e0839",
+			"name": "LU03.4 Read Book with invalid uuid",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/read?uuid=3247c340-xyzq-402e-b400-0a23a9368c97",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "a12654e2-9c10-4e2b-8d61-8bd935f4dd67",
+			"name": "LU03.5 All Publishers",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/list",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "82783d66-418e-47ef-86f5-c9c53d6f47c1",
+			"name": "LU03.6 Read Publisher",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/read?uuid=ecd86148-5341-43c6-81ed-f3f4595965dc",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "d4cc6ff8-afb1-4971-82cf-9751aeb3796f",
+			"name": "LU03.7 Read unknown Publisher",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/read?uuid=fff86148-5341-43c6-81ed-f3f4595965dc",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "761826bf-ed8c-48ce-8397-2011b27c0e6a",
+			"name": "LU03.8 Read Publisher with invalid uuid",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/read?uuid=fff86148-5341-43c6-81ed",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "9f77fd89-12e0-4000-9848-f361bb0147a1",
+			"name": "LU04.1 Insert Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/create",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "a5529478-c96e-41db-8531-a7c247fb1abb",
+			"name": "LU04.2 Update Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/update",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "4ec03dfb-603e-4124-afe1-8c0ceb133301",
+			"name": "LU04.3 Update unknown Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/update",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "6c8e57c7-4e16-47cf-92ae-37d0e31e82f8",
+			"name": "LU04.4 Update Book with invalid uuid",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/update",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "37483c94-260c-4fc2-89c1-a2babce6656f",
+			"name": "LU04.5 Delete Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/delete?uuid=3247c340-c712-402e-b400-0a23a9368c97",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "4af1d17f-ae5f-4b76-b092-dd8166530eec",
+			"name": "LU04.6 Delete unknown Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/delete?uuid=3247c340-ffff-402e-b400-0a23a9368c97",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "4bb1bf0f-a451-46a6-9103-146da67d80f7",
+			"name": "LU04.9 Verify updates",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/list",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "2a32eb89-d52d-4759-86e4-b52ae0c0aedc",
+			"name": "LU04.10 Insert Publisher",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/create",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "4461e56d-2927-4fb4-9c2f-9e7386391c28",
+			"name": "LU04.11 Update Publisher",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/update",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "35c5e66c-8c5c-45b0-a9e3-db09cc4b64e0",
+			"name": "LU04.12  Delete Publisher not allowed",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/delete?uuid=06fc334d-7b02-434f-9222-6544d30d8832",
+			"time": 4,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "735e6761-9c05-49f5-9ccd-74a1b641e3dd",
+			"name": "LU04.13 Delete Book",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/book/delete?uuid=73bd4187-a5b7-4864-be79-327bb8ed43bf",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "398986b7-8512-4b89-99fa-2b806df08cf8",
+			"name": "LU04.14  Delete Publisher",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/delete?uuid=06fc334d-7b02-434f-9222-6544d30d8832",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "012075e9-827e-4ff6-829f-d3617f962ada",
+			"name": "LU04.19 Verify updates",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/publisher/list",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"validate response": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"validate response": true
+				}
+			]
+		},
+		{
+			"id": "24e067a6-d7d6-44ff-9751-639dca1ddce1",
+			"name": "LU04.99 Restore data",
+			"url": "http://localhost:8080/Bookshelf-1.0/resource/test/restore",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 167,
+	"collection": {
+		"requests": [
+			{
+				"id": "bbdad673-695f-4ef6-a847-50be97f6f1b1",
+				"method": "GET"
+			},
+			{
+				"id": "0356a9fc-1f92-4e90-8ea0-303b800aa49f",
+				"method": "GET"
+			},
+			{
+				"id": "5702ca88-fef2-4c2f-bc3b-12d76fc34902",
+				"method": "GET"
+			},
+			{
+				"id": "e7bbb270-6366-4164-a3f3-f4b8aa1f38fb",
+				"method": "GET"
+			},
+			{
+				"id": "c3261454-4c85-477c-af85-e038c46e0839",
+				"method": "GET"
+			},
+			{
+				"id": "a12654e2-9c10-4e2b-8d61-8bd935f4dd67",
+				"method": "GET"
+			},
+			{
+				"id": "82783d66-418e-47ef-86f5-c9c53d6f47c1",
+				"method": "GET"
+			},
+			{
+				"id": "d4cc6ff8-afb1-4971-82cf-9751aeb3796f",
+				"method": "GET"
+			},
+			{
+				"id": "761826bf-ed8c-48ce-8397-2011b27c0e6a",
+				"method": "GET"
+			},
+			{
+				"id": "9f77fd89-12e0-4000-9848-f361bb0147a1",
+				"method": "POST"
+			},
+			{
+				"id": "a5529478-c96e-41db-8531-a7c247fb1abb",
+				"method": "PUT"
+			},
+			{
+				"id": "4ec03dfb-603e-4124-afe1-8c0ceb133301",
+				"method": "PUT"
+			},
+			{
+				"id": "6c8e57c7-4e16-47cf-92ae-37d0e31e82f8",
+				"method": "PUT"
+			},
+			{
+				"id": "37483c94-260c-4fc2-89c1-a2babce6656f",
+				"method": "DELETE"
+			},
+			{
+				"id": "4af1d17f-ae5f-4b76-b092-dd8166530eec",
+				"method": "DELETE"
+			},
+			{
+				"id": "4bb1bf0f-a451-46a6-9103-146da67d80f7",
+				"method": "GET"
+			},
+			{
+				"id": "2a32eb89-d52d-4759-86e4-b52ae0c0aedc",
+				"method": "POST"
+			},
+			{
+				"id": "4461e56d-2927-4fb4-9c2f-9e7386391c28",
+				"method": "PUT"
+			},
+			{
+				"id": "35c5e66c-8c5c-45b0-a9e3-db09cc4b64e0",
+				"method": "DELETE"
+			},
+			{
+				"id": "735e6761-9c05-49f5-9ccd-74a1b641e3dd",
+				"method": "DELETE"
+			},
+			{
+				"id": "398986b7-8512-4b89-99fa-2b806df08cf8",
+				"method": "DELETE"
+			},
+			{
+				"id": "012075e9-827e-4ff6-829f-d3617f962ada",
+				"method": "GET"
+			},
+			{
+				"id": "24e067a6-d7d6-44ff-9751-639dca1ddce1",
+				"method": "GET"
+			}
+		]
+	}
+}

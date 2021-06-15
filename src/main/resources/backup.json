@@ -1,0 +1,51 @@
+[ {
+  "bookUUID" : "c746a291-0ef9-4b2a-8268-392b12d636bd",
+  "title" : "The Winds of Winter",
+  "author" : "George R R Martin",
+  "publisher" : {
+    "publisherUUID" : "606cc4a5-8bfd-4e24-85c1-ecf6b9814712",
+    "publisher" : "Bantam"
+  },
+  "price" : 52.75,
+  "isbn" : "978-0-1256-0432-1"
+}, {
+  "bookUUID" : "d82bf28e-eb73-45c9-9ce3-1f94a599a0b5",
+  "title" : "The Shadow of What Was Lost",
+  "author" : "James Islington",
+  "publisher" : {
+    "publisherUUID" : "ecd86148-5341-43c6-81ed-f3f4595965dc",
+    "publisher" : "Orbit"
+  },
+  "price" : 15.30,
+  "isbn" : "978-0-3162-7407-4"
+}, {
+  "bookUUID" : "3247c340-c712-402e-b400-0a23a9368c97",
+  "title" : "An Echo Of Things To Come",
+  "author" : "James Islington",
+  "publisher" : {
+    "publisherUUID" : "ecd86148-5341-43c6-81ed-f3f4595965dc",
+    "publisher" : "Orbit"
+  },
+  "price" : 32.5,
+  "isbn" : "978-0-3162-7409-8"
+}, {
+  "bookUUID" : "73bd4187-a5b7-4864-be79-327bb8ed43bf",
+  "title" : "The wise man's fear",
+  "author" : "Patrick Rothfuss",
+  "publisher" : {
+    "publisherUUID" : "06fc334d-7b02-434f-9222-6544d30d8832",
+    "publisher" : "DAW Books"
+  },
+  "price" : 27.75,
+  "isbn" : "978-0-7564-0473-4"
+}, {
+  "bookUUID" : "1a42bc39-9eb3-4f5c-93d2-3c3f9f775f60",
+  "title" : "",
+  "author" : null,
+  "publisher" : {
+    "publisherUUID" : "f117943a-a5de-4a98-b685-c0b9ee0350b8",
+    "publisher" : "Good reads"
+  },
+  "price" : null,
+  "isbn" : null
+} ]

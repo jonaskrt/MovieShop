@@ -32,7 +32,6 @@ public class BookService {
     @GET
     @Path("list")
     @Produces(MediaType.APPLICATION_JSON)
-
     public Response listBooks(
     ) {
         Map<String, Book> bookMap = DataHandler.getBookMap();
@@ -41,7 +40,6 @@ public class BookService {
                 .entity(bookMap)
                 .build();
         return response;
-
     }
 
     /**
@@ -53,7 +51,6 @@ public class BookService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-
     public Response readBook(
             @NotEmpty
             @Pattern(regexp = "[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}")
@@ -68,7 +65,6 @@ public class BookService {
         } else {
             httpStatus = 404;
         }
-
 
         Response response = Response
                 .status(httpStatus)
@@ -146,7 +142,6 @@ public class BookService {
             httpStatus = 404;
         }
 
-
         Response response = Response
                 .status(httpStatus)
                 .entity("")
@@ -176,7 +171,6 @@ public class BookService {
         } else {
             httpStatus = 404;
         }
-
 
         Response response = Response
                 .status(httpStatus)
@@ -210,5 +204,4 @@ public class BookService {
         Publisher publisher = DataHandler.getPublisherMap().get(publisherUUID);
         book.setPublisher(publisher);
     }
-
 }

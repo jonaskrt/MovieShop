@@ -1,15 +1,6 @@
 package ch.bzz.bookshelf.service;
 
-/**
- * provides services for the publisher
- * <p>
- * M133: Bookshelf
- *
- * @author arcel Suter
- */
-
 import ch.bzz.bookshelf.data.DataHandler;
-import ch.bzz.bookshelf.model.Book;
 import ch.bzz.bookshelf.model.Publisher;
 
 import javax.validation.Valid;
@@ -18,13 +9,19 @@ import javax.validation.constraints.Pattern;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.crypto.Data;
-import java.math.BigDecimal;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * provides services for the publisher
+ * <p>
+ * M133: Bookshelf
+ *
+ * @author arcel Suter
+ */
 @Path("publisher")
 public class PublisherService {
+
     /**
      * produces a map of all publishers
      *
@@ -33,7 +30,6 @@ public class PublisherService {
     @GET
     @Path("list")
     @Produces(MediaType.APPLICATION_JSON)
-
     public Response listPublishers(
     ) {
         Map<String, Publisher> publisherMap = DataHandler.getPublisherMap();
@@ -42,7 +38,6 @@ public class PublisherService {
                 .entity(publisherMap)
                 .build();
         return response;
-
     }
 
     /**
@@ -54,7 +49,6 @@ public class PublisherService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-
     public Response readPublisher(
             @NotEmpty
             @Pattern(regexp = "[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}")
@@ -69,7 +63,6 @@ public class PublisherService {
         } else {
             httpStatus = 404;
         }
-
 
         Response response = Response
                 .status(httpStatus)
@@ -155,5 +148,4 @@ public class PublisherService {
                 .build();
         return response;
     }
-
 }

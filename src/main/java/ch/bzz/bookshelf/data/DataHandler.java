@@ -34,7 +34,16 @@ public class DataHandler {
     private DataHandler() {
         bookMap = new HashMap<>();
         publisherMap = new HashMap<>();
-        readJSON();
+        readJSON("bookJSON");
+    }
+
+    /**
+     * restores the backup data
+     */
+    public static void restoreData() {
+        bookMap = new HashMap<>();
+        publisherMap = new HashMap<>();
+        readJSON("backupJSON");
     }
 
     /**
@@ -110,11 +119,16 @@ public class DataHandler {
 
     public static boolean updatePublisher(Publisher publisher) {
         boolean found = false;
+        String publisherUUID = publisher.getPublisherUUID();
+        if (getPublisherMap().containsKey(publisherUUID)) {
+            getPublisherMap().put(publisherUUID, publisher);
+            found = true;
+        }
+
         for (Map.Entry<String, Book> entry : getBookMap().entrySet()) {
             Book book = entry.getValue();
             if (book.getPublisher().getPublisherUUID().equals(publisher.getPublisherUUID())) {
                 book.setPublisher(publisher);
-                found = true;
             }
         }
         writeJSON();
@@ -133,13 +147,18 @@ public class DataHandler {
             if (book.getPublisher().getPublisherUUID().equals(publisherUUID)) {
                 if (book.getTitle() == null || book.getTitle().equals("")) {
                     deleteBook(book.getBookUUID());
-                    errorcode = 0;
                 } else {
                     return -1;
                 }
             }
         }
-        writeJSON();
+
+        if (getPublisherMap().containsKey(publisherUUID)) {
+            getPublisherMap().remove(publisherUUID);
+            errorcode = 0;
+            writeJSON();
+        }
+
         return errorcode;
     }
 
@@ -168,9 +187,9 @@ public class DataHandler {
     /**
      * reads the books and publishers
      */
-    private static void readJSON() {
+    private static void readJSON(String propertyName) {
         try {
-            byte[] jsonData = Files.readAllBytes(Paths.get(Config.getProperty("bookJSON")));
+            byte[] jsonData = Files.readAllBytes(Paths.get(Config.getProperty(propertyName)));
             ObjectMapper objectMapper = new ObjectMapper();
             Book[] books = objectMapper.readValue(jsonData, Book[].class);
             for (Book book : books) {

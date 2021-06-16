@@ -15,13 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * data handler for reading and writing the csv files
- * <p>
- * M133: Bookshelf
- *
- * @author Marcel Suter
- */
 
 public class DataHandler {
     private static final DataHandler instance = new DataHandler();
